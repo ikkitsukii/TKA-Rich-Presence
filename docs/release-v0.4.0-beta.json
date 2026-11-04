@@ -1,0 +1,21 @@
+{
+  "version": "v0.4.0-beta",
+  "nodeVersion": "v26.13.0",
+  "architecture": "x64",
+  "originalExecutableSha256": "9d1aa2ff93609bfd3f39f35ac7d43ecf3c2e4f69a688470ba8f48fd554137335",
+  "originalArchiveSha256": "49c1e207d4223a0af99ef4e4c0306d49a6c94c5047e9d836e702edd026efcaa0",
+  "runtimeSources": {
+    "TKA_RPC/Scripts/main.lua": "7c8793a7271d83ee1d25571dbd4cbf95bd1092c5b4b1e1572a4a8e6829d26dd8",
+    "TKA_RPC/Scripts/Interactions.lua": "4ca1834891cb8b06837bb7c7f7827f300349e14f0af78ad0310daefbff5208a7",
+    "TKA_RPC/Scripts/AutoStart.lua": "b722c23eea12275c4808a3282fd98d20a245be53597e236331654ff83002992f",
+    "TKA_RPC/Bridge/AutoStart.ps1": "06889bee18471e87559775b446e3e0f4bdfabaaf7f00fe282c096321389e7d73",
+    "rpc/bridge.cjs": "6a28efdab2327eb84ee650604cbb6ebb8947d74d78c925d9be676b744c0cf5cc",
+    "rpc/discord.cjs": "6a0b1874ad6da54e04e82a42391f7bee9aeaf1507f3e7573e28ce0ec0d8d9a69",
+    "rpc/locales.cjs": "d66672dce9401351ebb3f2ee482575b0167adf7ac48b847861f4cd34f1a9cf2c",
+    "rpc/maps.cjs": "7488b0be0bf51208fb3a2e9295cbf11e2561c6724bb58facc895c91a5b664286",
+    "rpc/presence.cjs": "180964baa14cc0bf87edd34635f11ccedf5a6da160ba6e1033f7fb5c5fa0f512"
+  },
+  "rebuiltExecutableSha256": "3ea852975ea9d08e0f4d4f25e935475c91c184ad19f4aee4bc357a5ebe7c69dd",
+  "byteIdenticalRebuild": false,
+  "rebuildNotes": "Build-directory path embedded in SEA differs; equal sizes and PE timestamps/checksums. Not every binary difference independently explained."
+}

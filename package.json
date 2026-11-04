@@ -1,0 +1,14 @@
+{
+  "name": "tka-rich-presence",
+  "version": "0.4.0-beta",
+  "private": true,
+  "description": "Reviewable source for the TKA Discord Rich Presence UE4SS mod and Windows helper",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "engines": {"node": "26.13.0"},
+  "scripts": {
+    "build": "node scripts/build-executable.cjs",
+    "package": "node scripts/package-autostart.cjs",
+    "test": "node --test tests/rpc.test.cjs tests/autostart.test.cjs",
+    "audit:source": "node scripts/audit-source.cjs"
+  }
+}

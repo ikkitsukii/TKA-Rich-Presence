@@ -1,0 +1,4 @@
+# Preserve the original release source bytes and line endings for hash review.
+* -text
+# Keep the upstream legal notice verbatim, including its original indentation.
+THIRD-PARTY-NOTICES.txt -whitespace

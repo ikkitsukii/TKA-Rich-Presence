@@ -1,0 +1,10 @@
+package.path = './TKA_RPC/Scripts/?.lua;' .. package.path
+local auto = require('AutoStart')
+local command = assert(auto.command([[ @C:\ignore]]) == nil)
+local encoded = assert(auto.command([[@C:\Games\João & Ana's 100%\Mods\TKA_RPC\Scripts\AutoStart.lua]]))
+assert(encoded:find('-WindowStyle Hidden -EncodedCommand ', 1, true))
+assert(not encoded:find('João', 1, true))
+assert(not encoded:find('&', 1, true))
+assert(auto.command('@relative/Scripts/main.lua') == nil)
+print(encoded)
+print('PASS: absolute directory validation; UTF-16 encoded launcher; shell metacharacters isolated')

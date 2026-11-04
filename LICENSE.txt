@@ -1,0 +1,12 @@
+TKA Discord Rich Presence
+Copyright (c) 2026 IkkiTsuki (hikarinovamente). Todos os direitos reservados.
+
+É permitido baixar, instalar e usar este mod gratuitamente para uso pessoal.
+Os fontes acompanham o pacote para consulta e ajustes locais de uso pessoal.
+Redistribuir o mod, republicar seus arquivos ou distribuir versões modificadas
+exige autorização prévia do autor. Nenhuma licença MIT é concedida.
+
+Esta declaração se aplica ao código original do mod. The Killing Antidote,
+personagens, cenários, logo e demais materiais de terceiros permanecem sob
+os direitos de seus respectivos titulares. Nenhum direito sobre esses
+materiais é transferido por este arquivo.

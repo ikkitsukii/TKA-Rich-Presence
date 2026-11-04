@@ -1,0 +1,18 @@
+const fs=require('node:fs'),path=require('node:path'),{createHash}=require('node:crypto');
+const root=path.resolve(__dirname,'..'),out=path.join(root,'dist','TKA-RPC-0.4.0-beta-autostart');
+if(fs.existsSync(out))throw new Error('Preserve existing release; choose a new version.');
+const mod=path.join(out,'TKA_RPC'),bridge=path.join(mod,'Bridge');
+fs.mkdirSync(path.join(mod,'Scripts'),{recursive:true});
+for(const name of fs.readdirSync(path.join(root,'TKA_RPC/Scripts')))fs.copyFileSync(path.join(root,'TKA_RPC/Scripts',name),path.join(mod,'Scripts',name));
+fs.copyFileSync(path.join(root,'TKA_RPC/enabled.txt'),path.join(mod,'enabled.txt'));
+fs.mkdirSync(path.join(bridge,'rpc'),{recursive:true});
+fs.copyFileSync(path.join(root,'TKA_RPC/Bridge/AutoStart.ps1'),path.join(bridge,'AutoStart.ps1'));
+fs.copyFileSync(path.join(root,'TKA-RPC.exe'),path.join(bridge,'TKA-RPC.exe'));
+for(const name of fs.readdirSync(path.join(root,'rpc')).filter(n=>n.endsWith('.cjs')))fs.copyFileSync(path.join(root,'rpc',name),path.join(bridge,'rpc',name));
+const config=JSON.parse(fs.readFileSync(path.join(root,'rpc/config.json'),'utf8'));config.logPath='';
+fs.writeFileSync(path.join(bridge,'rpc/config.json'),JSON.stringify(config,null,2)+'\n');
+for(const name of ['LICENSE.txt','THIRD-PARTY-NOTICES.txt'])fs.copyFileSync(path.join(root,name),path.join(mod,name));
+for(const lang of ['PT-BR','EN'])fs.copyFileSync(path.join(root,'publication','AUTOSTART-'+lang+'.md'),path.join(out,'README-'+lang+'.md'));
+const hashes=[];function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const f=path.join(dir,e.name);if(e.isDirectory())walk(f);else hashes.push(createHash('sha256').update(fs.readFileSync(f)).digest('hex')+'  '+path.relative(out,f).replaceAll('\\','/'));}}walk(out);
+fs.writeFileSync(path.join(out,'SHA256SUMS.txt'),hashes.join('\n')+'\n');
+console.log('Packaged drop-in mod: '+out);

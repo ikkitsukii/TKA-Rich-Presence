@@ -1,0 +1,26 @@
+{
+  "applicationId": "1566938048816746567",
+  "language": "pt-BR",
+  "logPath": "",
+  "staleSeconds": 90,
+  "updateSeconds": 15,
+  "largeImage": "tka_menu_action_v2",
+  "appearanceImages": {
+    "JodisOffice": "tka_room_office",
+    "Level_1": "tka_room_story_1",
+    "Level_2": "tka_room_story_2"
+  },
+  "mapImages": {
+    "JodisOffice": "tka_jodis_office",
+    "Level_1": "tka_story_1",
+    "Level_2": "tka_story_2",
+    "ShootingRange": "tka_shooting_range",
+    "Challenge_TestScene": "tka_proving_ground",
+    "Challenge_Prison": "tka_central_control",
+    "Challenge_WeepingRoom": "tka_weeping_room",
+    "Challenge_Maze": "tka_nightmare_castle",
+    "Challenge_Hangar": "tka_abandoned_hangar",
+    "Challenge_Graveyard": "tka_graveyard",
+    "Challenge_FastFood": "tka_fast_food"
+  }
+}
